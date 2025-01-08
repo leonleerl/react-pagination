@@ -14,8 +14,9 @@ interface User {
     signupDate:string
 }
 
-interface UserProps {
-    users: User[]
+interface TableProps {
+    questions: Question[],
+    limit: number
 }
 
 interface GetUserProps{
@@ -23,6 +24,18 @@ interface GetUserProps{
     limit:number
 }
 
+interface GetQuestionProps{
+    page:number,
+    limit:number
+}
+
 interface SelectLimitsProps{
     onLimitChange: (limit: number) => void
 }
+
+interface Question {
+    name: string;
+    category: string;
+    difficulty: string;
+  }
+  
